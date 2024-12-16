@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Status App</title>
+</head>
+<body>
+    <h1 class="heading">Status app</h1>
+    <p class="caption">This app will report the status of the students.</p>
+    <div class="container">
+        <div class="row">
+            <p id="yes" class="count">Yes: 0</p>
+            <p id="no" class="count">No: 0</p>
+        </div>
+    <div class="row">
+
+        <input type="button" value="Yes" onclick="yesF()" >
+        <input type="button" value="No" onclick="noF()">
+    </div>
+    </div>
+</body>
+<script>
+    let yes = 0;
+    let no = 0;
+    function yesF(){
+        yes++;
+        document.getElementById("yes").innerHTML = "Yes: " + yes;
+    }
+    function noF(){
+        no++;
+        document.getElementById("no").innerHTML = "No: " + no;
+    }
+
+</script>
+    <script src="script.js"></script>
+</html>

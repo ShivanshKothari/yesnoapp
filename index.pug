@@ -1,0 +1,29 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet" href="styles.css")
+    title Status App
+  body
+    h1.heading Status app
+    p.caption This app will report the status of the students.
+    .container
+      .row
+        p#yes.count Yes: 0
+        p#no.count No: 0
+      .row
+        input(type="button" value="Yes" onclick="yesF()")
+        input(type="button" value="No" onclick="noF()")
+  script.
+    let yes = 0;
+    let no = 0;
+    function yesF() {
+      yes++;
+      document.getElementById("yes").innerHTML = "Yes: " + yes;
+    }
+    function noF() {
+      no++;
+      document.getElementById("no").innerHTML = "No: " + no;
+    }
+  script(src="script.js")
